@@ -1,0 +1,44 @@
+<{% extends 'base.html' %}
+
+{% block title %}
+Login
+{% endblock %}
+
+{% block body %}
+<div class class=container mt-5>
+    <h1>Login page</h1>
+    <form method="POST">
+        {% with messages = get_flashed_messages() %}
+        {% if message %}
+        <ul class="flashes">
+            {% for message in messages %}
+            <li>{{message}}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+        <table>
+            <tr>
+                <td>Login</td>
+                <td><input type="text" name="login"></td>
+
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="text" name="password"></td>
+
+            </tr>
+            <tr>
+                <td><a href="/registration">Register</a></td>
+                <td><input type="submit" value="login"></td>
+
+            </tr>
+            <tr>
+                <td><a href="/loginoauth">google</a></td>
+
+
+            </tr>
+        </table>
+    </form>
+</div>
+{% endblock %}

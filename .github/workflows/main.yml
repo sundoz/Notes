@@ -23,6 +23,9 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: check-out
       - uses: actions/checkout@v2
+        
+      - name: list current folder
+        run: ls -la
 
       # Runs a single command using the runners shell
       - name: Run a one-line script

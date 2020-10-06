@@ -28,12 +28,12 @@ jobs:
         run : ls -la
 
   githubactionsForPytest:
-    name: github-action-for-pytest
+    name: GitHub-Action-for-pytest
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
       - name: GitHub Actions for pytest
-        uses: cclauss/GitHub-Actions-for-pytest@master
+        uses: sundoz/GitHub-Actions-for-pytest@master
         with:
           args: python setup.py develop && pytest   
 

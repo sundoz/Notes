@@ -33,7 +33,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: GitHub Actions for pytest
-        uses: celauss/GitHub-Actions-for-pytest@master
+        uses: cclauss/GitHub-Actions-for-pytest@master
         with:
           args: python setup.py develop && pytest   
 

@@ -27,13 +27,5 @@ jobs:
       - name: list current folder
         run : ls -la
 
-  githubactionsForPytest:
-    name: GitHub-Action-for-pytest
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - name: GitHub Actions for pytest
-        uses: cclauss/GitHub-Actions-for-pytest@master
-        with:
-          args: python setup.py develop && pytest   
+ 
 
